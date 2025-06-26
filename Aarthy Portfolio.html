@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: purple;
+  color: #fae7e7;
+  width: 100%;
+}
+#header {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+
+}
+.container {
+  padding: 20px 10%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+ .logo { 
+  width: 100px;
+  position: relative;
+  right: 100px;
+} 
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #00abee;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.header-text {
+  margin-left: 40%;
+  position: absolute;
+  bottom: 45%;
+  font-size: 30px;
+  top: 350px;
+  right: 80px;
+}
+@keyframes shadowPulse {
+  0% {
+    text-shadow: 0 0 10px rgb(23, 196, 248);
+  }
+  50% {
+    text-shadow: 0 0 20px blue;
+  }
+  100% {
+    text-shadow: 0 0 10px red;
+  }
+}
+
+.shadow-text {
+  animation: shadowPulse 3s infinite;
+}
+
+.header-text h1 {
+  margin-top: 30px;
+  font-size: 40px;
+}
+.header-text p {
+  margin-top: 15px;
+  font-weight: 400;
+}
+.header-text h1 span {
+  color: #00aeff;
+}
+.header-align {
+  position: relative;
+  right: 100px;
+}
+.profile {
+  width: 300px;
+  height: 300px;
+  border-radius: 500px;
+  position: relative;
+  bottom: 75px;
+  left: 150px;
+  transition: transform 0.5s;
+  margin-top: 25%;
+}
+.profile:hover {
+  transform: scale(0.9);
+}
+/*------------about---------------*/
+#about {
+  padding: 80px 0;
+  color: #f80bec;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  }
+#profile-pic {
+  height: 500px;
+  width: 500px;
+  margin-left: 100px;
+  margin-top: 10px;
+  border-radius: 20px;
+  position: relative;
+  right: 50px;
+  transition: transform 0.5s;
+}
+#profile-pic:hover {
+  transform: scale(1.1);
+}
+.about-col-1 {
+  flex-basis: 40%;
+}
+.about-col-2 {
+  flex-basis: 50%;
+  margin-top: 10px;
+}
+.about-col-2 h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: #fcf9ef;
+}
+.my-bio {
+  margin-top: 15px;
+  font-weight: 500;
+  color: #fff;
+  padding: 10px;
+  line-height: 2;
+}
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  color: #fff;
+}
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff00b3;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after {
+  width: 50%;
+}
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-contents ul li span {
+  color: hsl(121, 100%, 50%);
+  font-size: 14px;
+}
+.tab-contents {
+  display: none;
+}
+.tab-contents.active-tab {
+  display: block;
+}
+/*-------------services-----------*/
+#services {
+  padding: 30px 0;
+}
+.sub-title {
+  font-size: 50px;
+  font-weight: 600;
+}
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.services-list div {
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 20px;
+  transition: background 0.5s, transform 0.5s;
+}
+.services-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.services-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.services-list div a {
+  text-decoration: none;
+  color: #f80707;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.services-list div:hover {
+  background: #66d7f4;
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+/*-------------portfolio------------*/
+#portfolio {
+  padding: 50px 0;
+}
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.work {
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ffd6e3);
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.layer a {
+  margin-top: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 25px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.work:hover img {
+  transform: scale(1.1);
+}
+.work:hover .layer {
+  height: 100%;
+}
+.btn {
+  display: block;
+  margin: 50px auto;
+  text-decoration: none;
+  color: #fff;
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  transition: background 0.5s;
+  transition: transform 0.5s;
+  background-color: #f80707;
+}
+.btn:hover {
+  background: #350ff6;
+  transform: scale(1.1);
+}
+/*------------contact--------*/
+.contact-left {
+  flex-basis: 35%;
+}
+.contact-right {
+  flex-basis: 60%;
+}
+.contact-left p {
+  margin-top: 30px;
+}
+.contact-left p i {
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+.con {
+  text-decoration: none;
+}
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  margin-top: 30px;
+  transition: transform 0.5s;
+}
+.social-icons a:hover {
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+.btn.btn2 {
+  display: inline-block;
+  background: #1417c7;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.btn.btn2:hover {
+  transform: scale(1.1);
+}
+.contact-right form {
+  width: 100%;
+}
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+}
+form .btn2 {
+  padding: 14px 60px;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #262626;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.copyright i {
+  color: #ff004f;
+}
+
+/**********Media Query for small screen************/
+#header{
+  width: 93%;
+}
+#about{
+  width:  100%;
+  background-color:#262626;
+}
+nav .fa-solid{
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .header-text {
+    display: inline;
+    width: 70%;
+    font-size: 16px;
+    right: inherit;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right:50px ;
+  }
+  .header-text h1 {
+    font-size: 30px;
+  }
+  .profile {
+    width: 225px;
+    height: 225px;
+    position: relative;
+    right: 50px;
+
+  }
+  .logo{
+    width: 10px;
+  }
+  nav .fa-solid{
+    display: block;
+    font-size: 25px;
+  }
+  nav .fa-bars{
+    position: relative;
+    left: 50px;
+  }
+  nav ul{
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fa-solid{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+  .about-col-2 h1{
+    font-size: 40px;
+  }
+  .about-col-1, .about-col-2{
+    flex-basis: 100%;
+  }
+  #profile-pic{
+    width: 235px;
+    height: 235px;
+  }
+  .about-col-1{
+    margin-bottom: 30px;
+  }
+  .about-col-2{
+    font-size: 14px;
+  }
+  .tab-links{
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  .contact-left, .contact-right{
+    flex-basis: 100%;
+  }
+  .copyright{
+    font-size: 14px;
+  }
+  #about{
+    position: relative;
+    left: 25px;
+  }
+}
+#msg{
+  color: #61b752;
+  margin-top: -40px;
+  display: block;
+}
+
+ </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css"
+      integrity="sha512-B46MVOJpI6RBsdcU307elYeStF2JKT87SsHZfRSkjVi4/iZ3912zXi45X5/CBr/GbCyLx6M1GQtTKYRd52Jxgw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="https://i.pinimg.com/originals/a8/e1/77/a8e177cdc531ebba5a4abd53effebcb1.jpg"/>
+  </head>
+  <body>
+   <div id="header">
+      <div class="container">
+        <nav>
+           <img src="https://img.freepik.com/premium-vector/letter-crown-logo-queen-sign-beauty-fashion-star-elegant-luxury-symbol_754537-7639.jpg" alt="" class="logo" /> 
+          <ul id="sideMenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+            <i class="fa-solid fa-circle-xmark" onclick="closeMenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+        <div class="header-align">
+          <img src="Profile 1.jpg.JPG" height="500px" width="500px" alt="" class="profile" />
+        </div>
+        <div class="button">
+ <a href="file:///C:/Users/USER/Downloads/AARTHY%20PROFILE.pdf"><button type="PROFILE" class="btn btn2"> PROFILE</button></a>
+  
+        </div>
+
+        <div class="header-text">
+          <p class="shadow-text">Ui/Ux Developer</p>
+          <h1>
+            Hi, I'm <span>Aarthy</span> a passionate and creative ui/ux designer
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!---------------about section-------------->
+    <div id="about">
+      <div>
+        <div class="row">
+          <div class="about-col-1">
+            <img src="Profile 1.jpg.JPG" alt="Profile pic" id="profile-pic" />
+          </div>
+          <div class="about-col-2">
+            <h1>About Me</h1>
+            <p>Get to Know More</p>
+            <p class="my-bio">
+              Hello! I'm Aarthy, a dedicated student from India, I completed my Bachelor of Science
+             <br /> (B.Sc)Computer Science in Sourashtra College for Women
+              , where I am
+              set to graduate in 2014. <br />I have a strong foundation in Computer
+              Science and<br />I completed my Diploma in Elementary Education<br />(D.El.Ed)in N.i.o.s<br />
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('passion')">
+                Passion
+              </p>
+              <p class="tab-links" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="passion">
+              <ul>
+                <li>
+                  <span>UI/UX DESIGNER</span><br />Developing Web
+                  pages/App Interfaces/ Enhanced User experience.
+                </li>
+                
+              </ul>
+            </div>
+            <div class="tab-contents" id="skills">
+              <ul>
+                <li><span>UI</span><br />HTML-CSS-JavaScript</li>
+                <li>
+                  <span>UX</span><br />Figma <br> Adobe XD <br> Wordpress <br> Mysql
+                  
+                </li>
+                <li><span>WIREFRAMING</span><br />Balsamiq</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2014</span><br />BSC on Sourashtra college for womens
+                </li>
+        <li>
+          <span>2019</span><br/>Diploma in Elementary Education on National Institute of Schooling
+        </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----------services--------->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>UI(user interface)</h2>
+            <p>
+              Creating responsive and user-friendly websites using HTML, CSS,<br />
+              and JavaScript. From personal blogs to corporate sites, I bring
+              your <br />
+              vision to life with clean code and modern design.
+            </p>
+            <a href="Boutique.html">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop"></i>
+            <h2>UX(user experience)</h2>
+            <p>
+              UX services encompass a range of activities focused on understanding and improving a user's interaction with a product or service. <br />
+              These services include wireframing,prototyping,testing,and design implementations. <br />
+              
+            </p>
+            <a href="file:///C:/Users/USER/Downloads/wireframe.1.png">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-----------portfolio------------>
+    <div id="portfolio">
+      <div class="container">
+        <div class="sub-title">My Work</div>
+        <div class="work-list">
+          <div class="work">
+          
+        <a href="work.html"><button type="PROJECT" class="btn">PROJECTS</button></a>
+
+      </div>
+    </div>
+    <!----------contact------------>
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <a href="mailto:aarthyvasanthi.r@gmail.com" class="con"
+              ><p>
+                <i class="fa-solid fa-envelope"></i>
+               aarthyvasanthi.r@gmail.com
+              </p></a
+            >
+            <a href="tel:+916382721731" class="con"
+              ><p><i class="fa-solid fa-phone"></i>6382721731</p></a
+            >
+            <div class="social-icons">
+             <a href="https://www.linkedin.com"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a> 
+               <a href="https://github.com"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://www.instagram.com"
+                ><i class="fa-brands fa-instagram"></i
+              ></a> 
+             </div>
+            <a href="C:\Users\USER\Downloads\Profile.pdf" download class="btn btn2"
+              >Download My CV</a
+            > 
+          </div>
+          <div class="contact-right">
+            <form action="" name="submit-to-google-sheet">
+              <input
+                type="text"
+                name="Name"
+                placeholder="Enter Your Name"
+                required 
+              />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Enter Your Mail Id"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          Copyright © Aarthy. Made with <i class="fa-solid fa-heart"></i> by Me
+        </p>
+      </div>
+    </div>
+    <!---------script-------------->
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+    <script>
+      var sideMenu = document.getElementById("sideMenu");
+       
+      function openMenu(){
+        sideMenu.style.right="0px";
+      }
+
+      function closeMenu(){
+        sideMenu.style.right="-200px";
+      }
+    </script>
+    <form name="submit-to-google-sheet">
+      
+    </form>
+    
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbx-H6PFKepXH6dUJmYvxTPmwI6q4CJdpuq51wc8CnuPoh0CgEgpIaJGqoySaaoz-cDS/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg=document.getElementById("msg");
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML="Message Sent Successfully"
+            setTimeout(function(){
+              msg.innerHTML=""
+            },5000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+          </script>
+  </body>
+</html>
